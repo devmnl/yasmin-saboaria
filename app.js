@@ -191,6 +191,9 @@ document.addEventListener('click', event => {
   const cartChange = event.target.closest('[data-cart-change]');
   const remove = event.target.closest('[data-remove]');
   const detailQuantityButton = event.target.closest('[data-detail-quantity]');
+  const sliderPrev = event.target.closest('[data-slider-prev]');
+  const sliderNext = event.target.closest('[data-slider-next]');
+  const sliderDot = event.target.closest('[data-dot]');
 
   if (add) {
     const qty = add.dataset.addQuantity === 'detail' ? detailQuantity : 1;
@@ -212,6 +215,10 @@ document.addEventListener('click', event => {
     if (count) count.textContent = detailQuantity;
     return;
   }
+  if (sliderPrev) { moveSlider(-1); return; }
+  if (sliderNext) { moveSlider(1); return; }
+  if (sliderDot) { gotoSlide(Number(sliderDot.dataset.dot)); return; }
+
   if (!action) return;
   if (action.dataset.action === 'open-cart') openCart();
   if (action.dataset.action === 'close-cart') closeCart();
@@ -289,9 +296,78 @@ if (STORE.instagram) {
 
 window.addEventListener('hashchange', renderRoute);
 document.querySelector('[data-year]').textContent = new Date().getFullYear();
+
+// Slider Logic
+let currentSlide = 0;
+let sliderInterval;
+const slides = document.querySelectorAll('[data-slide]');
+const dots = document.querySelectorAll('[data-dot]');
+
+function gotoSlide(index) {
+  if (index < 0) index = slides.length - 1;
+  if (index >= slides.length) index = 0;
+  
+  currentSlide = index;
+  
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('is-active', i === currentSlide);
+  });
+  
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('is-active', i === currentSlide);
+  });
+  
+  resetSliderTimer();
+}
+
+function moveSlider(delta) {
+  gotoSlide(currentSlide + delta);
+}
+
+function resetSliderTimer() {
+  clearInterval(sliderInterval);
+  sliderInterval = setInterval(() => moveSlider(1), 5000);
+}
+
+function initSlider() {
+  if (slides.length > 0) {
+    resetSliderTimer();
+  }
+}
+
+function initAnimations() {
+  const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        
+        // Stagger children if they exist
+        const staggerItems = entry.target.querySelectorAll('.stagger-item');
+        staggerItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add('is-visible');
+          }, index * 150);
+        });
+        
+        // Once visible, stop observing
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
 try {
   if (localStorage.getItem('yasmin-cookie-dismissed') === '1') document.querySelector('[data-cookie-note]').hidden = true;
 } catch (_) { /* armazenamento indisponível */ }
 renderProducts();
 updateCartCount();
 renderRoute();
+initSlider();
+initAnimations();
