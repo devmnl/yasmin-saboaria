@@ -1,4 +1,4 @@
-/* Dados demonstrativos: substitua catálogo, preços, contatos e textos antes de publicar. */
+/* Dados da coleção Yasbella Saboaria. */
 const STORE = {
   name: 'Yasbella Saboaria',
   whatsapp: '5511943370562', // DDI + DDD + número, somente dígitos
@@ -7,15 +7,12 @@ const STORE = {
 };
 
 const PRODUCTS = [
-  { id: 'curcuma', name: 'Barra de Cúrcuma', subtitle: 'Cúrcuma & especiarias · luminosidade', price: 22, category: 'argilas', tone: 'turmeric', badge: 'Destaque', weight: '100 g', description: 'Uma barra vibrante e energizante, formulada com cúrcuma para trazer luminosidade e cuidado natural para a sua pele.', notes: ['Propriedades antioxidantes', 'Aroma quente e terroso', 'Textura suave com especiarias'] },
-  { id: 'calma', name: 'Barra Botânica', subtitle: 'Lavanda · pausa e aconchego', price: 18, category: 'banho', tone: 'rose', badge: 'Mais querido', weight: '100 g', description: 'Uma barra artesanal de aroma delicado, criada para transformar o banho em uma pausa tranquila no meio do dia.', notes: ['Aroma floral suave', 'Produção artesanal em pequenos lotes', 'Ideal para um ritual de cuidado'] },
-  { id: 'verde', name: 'Banho Verde', subtitle: 'Ervas frescas · sensação leve', price: 19, category: 'banho', tone: 'sage', badge: '', weight: '100 g', description: 'Uma combinação fresca e envolvente para quem gosta de aromas verdes e de um banho com clima de natureza.', notes: ['Perfil aromático herbal', 'Textura cremosa', 'Uma escolha para presentear ou se presentear'] },
-  { id: 'terra', name: 'Barra de Argila', subtitle: 'Argila · cuidado essencial', price: 21, category: 'argilas', tone: 'clay', badge: 'Novidade', weight: '100 g', description: 'Uma barra de aparência terrosa e toque artesanal, feita para trazer simplicidade e intenção à rotina de cuidado.', notes: ['Inspirada nos tons da terra', 'Acabamento artesanal', 'Cada peça tem seu próprio desenho'] },
-  { id: 'ritual', name: 'Kit Meu Ritual', subtitle: 'Três barras · presente especial', price: 54, category: 'kits', tone: 'cream', badge: 'Para presentear', weight: '3 unidades', description: 'Um conjunto demonstrativo para montar uma lembrança delicada. Personalize os aromas, a composição e a embalagem conforme sua coleção.', notes: ['Composição personalizável', 'Sugestão de presente', 'Embalagem e aromas a confirmar'] },
-  { id: 'mel', name: 'Barra Dourada', subtitle: 'Mel · aroma acolhedor', price: 18, category: 'banho', tone: 'cream', badge: '', weight: '100 g', description: 'Uma opção de aroma aconchegante para deixar o momento do banho mais especial.', notes: ['Perfil adocicado e confortável', 'Produção artesanal', 'Descrição final deve refletir sua fórmula'] },
-  { id: 'argila-rosa', name: 'Barra Rosé', subtitle: 'Argila rosa · delicadeza', price: 22, category: 'argilas', tone: 'rose', badge: '', weight: '100 g', description: 'Um sabonete demonstrativo em tons rosados, inspirado em uma rotina de cuidado leve e acolhedora.', notes: ['Visual delicado', 'Feito para uma experiência sensorial', 'Ingredientes a confirmar'] },
-  { id: 'duo', name: 'Duo de Afeto', subtitle: 'Duas barras · escolha seus aromas', price: 35, category: 'kits', tone: 'clay', badge: '', weight: '2 unidades', description: 'Monte um par com dois aromas da coleção e prepare um presente simples, bonito e cheio de intenção.', notes: ['Escolha dois aromas', 'Composição de exemplo', 'Confirme a disponibilidade no atendimento'] },
-  { id: 'botanico', name: 'Botânico Especial', subtitle: 'Edição artesanal · aroma suave', price: 20, category: 'banho', tone: 'sage', badge: '', weight: '100 g', description: 'Uma peça de exemplo com identidade botânica, pensada para ampliar sua coleção de cuidados artesanais.', notes: ['Aroma a definir', 'Design artesanal', 'Substitua por informações reais do produto'] }
+  { id: 'la-vie-est-belle', name: 'La Vie Est Belle', subtitle: 'Fragrância La Vie Est Belle', price: 12, weight: '90 g', images: ['assets/products/la-vie-est-belle.webp'], description: 'Sabonete perfumado com a fragrância La Vie Est Belle.', notes: ['Fragrância: La Vie Est Belle', 'Peso: 90 g'] },
+  { id: 'jasmin', name: 'Jasmin', subtitle: 'Fragrância Jasmin', price: 12, weight: '90 g', images: ['assets/products/jasmin.webp'], description: 'Sabonete perfumado com fragrância Jasmin.', notes: ['Fragrância: Jasmin', 'Peso: 90 g'] },
+  { id: 'giovanna-baby', name: 'Giovanna Baby', subtitle: 'Fragrância Giovanna Baby', price: 12, weight: '90 g', images: ['assets/products/giovanna-baby.webp'], description: 'Sabonete perfumado com fragrância Giovanna Baby.', notes: ['Fragrância: Giovanna Baby', 'Peso: 90 g'] },
+  { id: 'talco', name: 'Talco', subtitle: 'Fragrância Talco', price: 15, weight: '120 g', images: ['assets/products/talco.webp'], description: 'Sabonete perfumado com fragrância Talco.', notes: ['Fragrância: Talco', 'Peso: 120 g'] },
+  { id: 'lavanda', name: 'Lavanda', subtitle: 'Fragrância Lavanda', price: 15, weight: '120 g', images: ['assets/products/lavanda.webp'], description: 'Sabonete perfumado com fragrância Lavanda.', notes: ['Fragrância: Lavanda', 'Peso: 120 g'] },
+  { id: 'camomila', name: 'Camomila', subtitle: 'Fragrância Camomila', price: 15, weight: '120 g', images: ['assets/products/camomila.webp'], description: 'Sabonete perfumado com fragrância Camomila.', notes: ['Fragrância: Camomila', 'Peso: 120 g'] }
 ];
 
 const money = value => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
@@ -32,7 +29,10 @@ let toastTimer;
 let cart = readCart();
 
 function readCart() {
-  try { return JSON.parse(localStorage.getItem('yasmin-cart') || '{}'); }
+  try {
+    const saved = JSON.parse(localStorage.getItem('yasmin-cart') || '{}');
+    return Object.fromEntries(Object.entries(saved).filter(([id, qty]) => PRODUCTS.some(product => product.id === id) && Number(qty) > 0));
+  }
   catch (_) { return {}; }
 }
 
@@ -40,23 +40,24 @@ function saveCart() {
   try { localStorage.setItem('yasmin-cart', JSON.stringify(cart)); } catch (_) { /* armazenamento indisponível */ }
 }
 
-function soapArt(product, className) {
-  return '<div class="soap-illustration tone-' + product.tone + ' ' + (className || '') + '" aria-hidden="true"><span>YASBELLA</span></div>';
+function productPhoto(product, image, index, className) {
+  const alt = index === undefined ? product.name : product.name + ' — foto ' + (index + 1);
+  return '<img class="' + (className || '') + '" src="' + image + '" alt="' + alt + '" loading="lazy">';
 }
 
 function productCard(product) {
-  return '<article class="product-card" data-id="' + product.id + '" data-category="' + product.category + '" data-tone="' + product.tone + '">' +
+  return '<article class="product-card" data-id="' + product.id + '">' +
     '<div class="product-visual">' +
       '<button class="product-image-open" type="button" data-open-product="' + product.id + '" aria-label="Ver ' + product.name + '"></button>' +
-      (product.badge ? '<span class="product-badge">' + product.badge + '</span>' : '') + soapArt(product) +
+      productPhoto(product, product.images[0], undefined, 'product-photo') +
       '<button class="quick-add" type="button" data-add="' + product.id + '">Adicionar à sacola</button>' +
     '</div><div class="product-info"><button type="button" data-open-product="' + product.id + '"><h3>' + product.name + '</h3></button>' +
-      '<p>' + product.subtitle + '</p><div class="product-price"><span>' + money(product.price) + '</span><small>em até 1x</small></div></div></article>';
+      '<p>' + product.subtitle + (product.weight ? ' · ' + product.weight : '') + '</p><div class="product-price"><span>' + (product.price == null ? 'Consulte' : money(product.price)) + '</span><small>' + (product.price == null ? 'preço pelo WhatsApp' : 'por unidade') + '</small></div></div></article>';
 }
 
 function renderProducts() {
   const filtered = PRODUCTS.filter(product => {
-    const matchesCategory = activeFilter === 'todos' || product.category === activeFilter;
+    const matchesCategory = activeFilter === 'todos' || product.id === activeFilter;
     const haystack = (product.name + ' ' + product.subtitle + ' ' + product.description).toLocaleLowerCase('pt-BR');
     return matchesCategory && haystack.includes(searchTerm.toLocaleLowerCase('pt-BR'));
   });
@@ -73,14 +74,15 @@ function updateCartCount() {
   const items = Object.entries(cart).filter(([, qty]) => qty > 0).map(([id, qty]) => {
     const product = PRODUCTS.find(item => item.id === id);
     if (!product) return '';
-    return '<article class="cart-item"><div class="cart-item-art" data-tone="' + product.tone + '">' + soapArt(product) + '</div><div><h3>' + product.name + '</h3><p>' + money(product.price) + '</p><div class="cart-item-controls"><button type="button" aria-label="Diminuir quantidade" data-cart-change="' + id + '" data-delta="-1">−</button><span>' + qty + '</span><button type="button" aria-label="Aumentar quantidade" data-cart-change="' + id + '" data-delta="1">+</button></div></div><button class="cart-item-remove" type="button" data-remove="' + id + '">Remover</button></article>';
+    return '<article class="cart-item"><div class="cart-item-art">' + productPhoto(product, product.images[0], undefined, 'cart-item-photo') + '</div><div><h3>' + product.name + '</h3><p>' + (product.weight ? product.weight + ' · ' : '') + (product.price == null ? 'Consulte preço' : money(product.price)) + '</p><div class="cart-item-controls"><button type="button" aria-label="Diminuir quantidade" data-cart-change="' + id + '" data-delta="-1">−</button><span>' + qty + '</span><button type="button" aria-label="Aumentar quantidade" data-cart-change="' + id + '" data-delta="1">+</button></div></div><button class="cart-item-remove" type="button" data-remove="' + id + '">Remover</button></article>';
   });
   document.querySelector('[data-cart-items]').innerHTML = items.join('');
   const subtotal = Object.entries(cart).reduce((sum, [id, qty]) => {
     const product = PRODUCTS.find(item => item.id === id);
     return sum + (product ? product.price * qty : 0);
   }, 0);
-  document.querySelector('[data-cart-subtotal]').textContent = money(subtotal);
+  const hasUnpricedItem = Object.entries(cart).some(([id, qty]) => qty > 0 && PRODUCTS.some(product => product.id === id && product.price == null));
+  document.querySelector('[data-cart-subtotal]').textContent = hasUnpricedItem ? 'A combinar' : money(subtotal);
   saveCart();
 }
 
@@ -130,10 +132,11 @@ function renderProductPage(id) {
   homePage.hidden = true;
   productPage.hidden = false;
   const similar = PRODUCTS.filter(item => item.id !== id).slice(0, 4);
+  const thumbs = product.images.length > 1 ? '<div class="detail-thumbs">' + product.images.map((image, index) => '<button class="detail-thumb' + (index === 0 ? ' is-active' : '') + '" type="button" data-detail-image="' + index + '" aria-label="Ver foto ' + (index + 1) + '">' + productPhoto(product, image, index, 'detail-thumb-photo') + '</button>').join('') + '</div>' : '';
   productPage.innerHTML = '<div class="detail-breadcrumb"><a href="#inicio">Início</a> &nbsp;·&nbsp; <a href="#produtos">Produtos</a> &nbsp;·&nbsp; ' + product.name + '</div>' +
-    '<div class="detail-layout"><div class="detail-gallery"><div class="detail-thumbs"><button class="detail-thumb" type="button" aria-label="Imagem ilustrativa 1">' + soapArt(product) + '</button><button class="detail-thumb" type="button" aria-label="Imagem ilustrativa 2">✦</button></div>' +
-    '<div class="detail-main-art" data-tone="' + product.tone + '">' + soapArt(product) + '</div></div>' +
-    '<div class="detail-copy"><p class="eyebrow">YASBELLA SABOARIA · ' + product.weight + '</p><h1>' + product.name + '</h1><p class="detail-price">' + money(product.price) + '<small>Valor demonstrativo · ajuste para o seu produto</small></p>' +
+    '<div class="detail-layout"><div class="detail-gallery' + (product.images.length > 1 ? '' : ' detail-gallery--single') + '">' + thumbs +
+    '<div class="detail-main-art">' + productPhoto(product, product.images[0], 0, 'detail-main-photo') + '</div></div>' +
+    '<div class="detail-copy"><p class="eyebrow">YASBELLA SABOARIA · ' + product.weight + '</p><h1>' + product.name + '</h1><p class="detail-price">' + (product.price == null ? 'Consulte' : money(product.price)) + '<small>' + (product.price == null ? 'Preço e disponibilidade pelo WhatsApp' : 'Valor do produto') + '</small></p>' +
     '<div class="detail-buy-row"><div class="quantity-picker"><button type="button" aria-label="Diminuir quantidade" data-detail-quantity="-1">−</button><span data-detail-count>1</span><button type="button" aria-label="Aumentar quantidade" data-detail-quantity="1">+</button></div><button class="button button-dark" type="button" data-add="' + product.id + '" data-add-quantity="detail">Adicionar à sacola <span aria-hidden="true">↗</span></button></div>' +
     '<div class="detail-shipping"><strong>Entrega e atendimento</strong><p>Consulte disponibilidade, frete e prazo diretamente com a loja.</p><button type="button" data-action="whatsapp" data-product-message="' + product.name + '">Consultar pelo WhatsApp</button></div>' +
     '<div class="detail-description"><h2>Sobre este produto</h2><p>' + product.description + '</p><strong>Detalhes</strong><ul>' + product.notes.map(note => '<li>' + note + '</li>').join('') + '</ul></div></div></div>' +
@@ -174,13 +177,14 @@ function whatsapp(text) {
 function checkout() {
   const items = Object.entries(cart).filter(([, qty]) => qty > 0).map(([id, qty]) => {
     const product = PRODUCTS.find(item => item.id === id);
-    return product ? qty + ' × ' + product.name + ' — ' + money(product.price * qty) : '';
+    return product ? qty + ' × ' + product.name + (product.weight ? ' (' + product.weight + ')' : '') + (product.price == null ? '' : ' — ' + money(product.price * qty)) : '';
   }).filter(Boolean);
   const total = Object.entries(cart).reduce((sum, [id, qty]) => {
     const product = PRODUCTS.find(item => item.id === id);
-    return sum + (product ? product.price * qty : 0);
+    return sum + (product && product.price != null ? product.price * qty : 0);
   }, 0);
-  whatsapp('Olá, Yasbella! Gostaria de fazer este pedido:\n' + items.join('\n') + '\nSubtotal: ' + money(total) + '\nPode me informar frete e formas de pagamento?');
+  const hasUnpricedItem = Object.entries(cart).some(([id, qty]) => qty > 0 && PRODUCTS.some(product => product.id === id && product.price == null));
+  whatsapp('Olá, Yasbella! Gostaria de fazer este pedido:\n' + items.join('\n') + '\nTotal: ' + (hasUnpricedItem ? 'a combinar' : money(total)) + '\nPode me informar o valor, frete e formas de pagamento?');
 }
 
 document.addEventListener('click', event => {
@@ -188,6 +192,7 @@ document.addEventListener('click', event => {
   const add = event.target.closest('[data-add]');
   const open = event.target.closest('[data-open-product]');
   const filter = event.target.closest('[data-filter]');
+  const detailImage = event.target.closest('[data-detail-image]');
   const cartChange = event.target.closest('[data-cart-change]');
   const remove = event.target.closest('[data-remove]');
   const detailQuantityButton = event.target.closest('[data-detail-quantity]');
@@ -202,6 +207,15 @@ document.addEventListener('click', event => {
   }
   if (open && !event.target.closest('.quick-add')) { openProduct(open.dataset.openProduct); return; }
   if (filter) { setFilter(filter.dataset.filter); return; }
+  if (detailImage) {
+    const gallery = detailImage.closest('.detail-gallery');
+    const mainImage = gallery.querySelector('.detail-main-photo');
+    const selectedImage = detailImage.querySelector('img');
+    mainImage.src = selectedImage.src;
+    mainImage.alt = selectedImage.alt;
+    gallery.querySelectorAll('[data-detail-image]').forEach(button => button.classList.toggle('is-active', button === detailImage));
+    return;
+  }
   if (cartChange) {
     const id = cartChange.dataset.cartChange;
     cart[id] = (cart[id] || 0) + Number(cartChange.dataset.delta);
